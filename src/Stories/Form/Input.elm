@@ -45,6 +45,10 @@ update msg model =
             { model | value = newValue }
 
 
+
+-- VIEW
+
+
 view : Model -> Html Msg
 view model =
     Ui.Input.new
