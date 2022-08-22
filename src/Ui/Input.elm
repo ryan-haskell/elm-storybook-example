@@ -1,9 +1,25 @@
-module Ui.Input exposing (new, view, withLabelAbove)
+module Ui.Input exposing
+    ( Settings, new
+    , withLabelAbove
+    , view
+    )
+
+{-|
+
+@docs Settings, new
+@docs withLabelAbove
+@docs view
+
+-}
 
 import Html exposing (Html)
 import Html.Attributes
 import Html.Events
 import Ui
+
+
+
+-- NEW
 
 
 type Settings msg
@@ -25,9 +41,17 @@ new options =
         }
 
 
+
+-- MODIFIERS
+
+
 withLabelAbove : Settings msg -> Settings msg
 withLabelAbove (Settings internals) =
     Settings { internals | hasLabelAbove = True }
+
+
+
+-- VIEW
 
 
 view : Settings msg -> Html msg
