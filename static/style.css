@@ -1,0 +1,229 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* VARIABLES */
+:root {
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-green300: hsl(147, 60%, 47%);
+  --color-green400: hsl(147, 60%, 57%);
+  --color-green500: hsl(147, 60%, 70%);
+  --color-green600: hsl(147, 60%, 80%);
+
+  --color-blue200: hsl(210, 80%, 35%);
+  --color-blue300: hsl(210, 80%, 45%);
+  --color-blue400: hsl(210, 80%, 55%);
+  --color-blue500: hsl(210, 80%, 65%);
+  --color-blue600: hsl(210, 80%, 75%);
+  --color-blue700: hsl(210, 80%, 85%);
+  --color-blue800: hsl(210, 80%, 95%);
+
+  --color-red200: hsl(10, 80%, 40%);
+  --color-red300: hsl(10, 80%, 48%);
+  --color-red400: hsl(10, 80%, 55%);
+  --color-red500: hsl(10, 80%, 60%);
+  --color-red600: hsl(10, 80%, 70%);
+
+  --font-sans: 'Nunito Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  --line-none: 1;
+  --line-md: 1.4;
+}
+
+/* RESETS */
+body {
+  font-family: var(--font-sans);
+  color: #222;
+  line-height: 1;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* UTILITIES */
+.row { display: flex; }
+.col { display: flex; flex-direction: column; }
+
+.pad-px25 { padding: 25px; }
+.pad-px50 { padding: 50px; }
+
+.gap-px5 { gap: 5px; }
+.gap-px25 { gap: 25px; }
+.gap-px50 { gap: 50px; }
+
+.color-blue600 { color: var(--color-blue600); }
+
+.bg-red400 { background-color: var(--color-red400); }
+.bg-green400 { background-color: var(--color-green400); }
+.bg-blue400 { background-color: var(--color-blue400); }
+.bg-blue600 { background-color: var(--color-blue600); }
+.bg-blue700 { background-color: var(--color-blue700); }
+.bg-blue800 { background-color: var(--color-blue800); }
+
+.width-px25 { width: 25px; }
+.width-px50 { width: 50px; }
+.width-px420 { width: 420px; }
+
+.height-px25 { height: 25px; }
+.height-px50 { height: 50px; }
+
+.radius-px4 { border-radius: 4px; }
+
+.font-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 32px;
+  line-height: var(--line-none);
+  letter-spacing: 0;
+}
+
+.font-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 28px;
+  line-height: var(--line-none);
+  letter-spacing: 0;
+}
+
+.font-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 24px;
+  line-height: var(--line-none);
+  letter-spacing: 0;
+}
+
+.font-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 20px;
+  line-height: var(--line-none);
+  letter-spacing: 0;
+}
+
+.font-h5 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 16px;
+  line-height: var(--line-none);
+  letter-spacing: 0;
+}
+
+.font-h6 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 12px;
+  line-height: var(--line-none);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.font-p {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: 16px;
+  line-height: var(--line-md);
+  letter-spacing: 0;
+}
+
+
+/* INPUT */
+
+.input-label {
+  font-weight: bold;
+}
+
+.input {
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.input:focus:not(:disabled) {
+  outline: dotted 2px var(--color-blue500);
+  outline-offset: 2px;
+}
+
+/* BUTTON */
+.button {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 16px;
+  height: 35px;
+  background-color: var(--color-blue300);
+  border: solid 2px var(--color-blue300);
+  color: var(--color-white);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: color 150 ease-in-out, 
+              background-color 150ms ease-in-out,
+              border-color 150ms ease-in-out;
+}
+
+.button:focus:not(:disabled) {
+  outline: dotted 2px var(--color-blue500);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: var(--color-blue400);
+  border-color: var(--color-blue400);
+}
+
+.button--primary:active:not(:disabled) {
+  background-color: var(--color-blue200);
+  border-color: var(--color-blue200);
+}
+
+.button--secondary {
+  background-color: var(--color-white);
+  border-color: var(--color-blue500);
+  color: var(--color-blue300);
+}
+
+.button--secondary:hover:not(:disabled) {
+  color: var(--color-blue400);
+  border-color: var(--color-blue600);
+}
+
+.button--secondary:active:not(:disabled) {
+  color: var(--color-blue200);
+  border-color: var(--color-blue400);
+}
+
+.button--danger {
+  color: var(--color-white);
+  background-color: var(--color-red300);
+  border-color: var(--color-red300);
+}
+
+.button--danger:hover:not(:disabled) {
+  background-color: var(--color-red400);
+  border-color: var(--color-red400);
+}
+
+.button--danger:active:not(:disabled) {
+  background-color: var(--color-red200);
+  border-color: var(--color-red200);
+}
